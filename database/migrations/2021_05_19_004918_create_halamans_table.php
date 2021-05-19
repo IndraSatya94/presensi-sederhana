@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreatePresensisTable extends Migration
+class CreateHalamansTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,13 @@ class CreatePresensisTable extends Migration
      */
     public function up()
     {
-        Schema::create('presensi', function (Blueprint $table) {
+        Schema::create('halamans', function (Blueprint $table) {
             $table->id();
-            $table->bigInteger('user_id');
-            $table->date("tgl");
-            $table->time('jammasuk')->nullable();
-            $table->time('jamkeluar')->nullable();
-            $table->time('jamkerja')->nullable();
+            $table->string('menu');
+            $table->string('nama');
+            $table->string('body');
+            $table->string('link');
+            $table->string('image');
             $table->timestamps();
         });
     }
@@ -31,6 +31,6 @@ class CreatePresensisTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('presensi');
+        Schema::dropIfExists('halamans');
     }
 }

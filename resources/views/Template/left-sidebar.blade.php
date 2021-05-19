@@ -22,60 +22,24 @@
             <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                 <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
-                @if (auth()->user()->level == "karyawan")
-                <li class="nav-item has-treeview">
-                    <a href="#" class="nav-link ">
-                        <i class="nav-icon fas fa-clock"></i>
+               <li class="nav-item">
+                    <a href="{{ route('halaman') }}" class="nav-link">
+                        <i class="fas fa-sign-out-alt"></i>
+                        <p>Halaman</p>
+                    </a>
+                </li>
 
+                @if (auth()->user()->level == "admin")
+                <li class="nav-item">
+                    <a href="{{ route('registrasi') }}" class="nav-link">
+                        <i class="nav-icon fas fa-th"></i>
                         <p>
-                            Presensi
-                            <i class="right fas fa-angle-left"></i>
+                            Daftarkan Operator Website
                         </p>
                     </a>
-                    <ul class="nav nav-treeview">
-                        <li class="nav-item">
-                            <a href="{{ route('presensi-masuk') }}" class="nav-link ">
-                                <i class="fas fa-sign-in-alt"></i>
-                                <p>Presensi Masuk</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="{{ route('presensi-keluar') }}" class="nav-link">
-                                <i class="fas fa-sign-out-alt"></i>
-                                <p>Presensi Keluar</p>
-                            </a>
-                        </li>
-                    </ul>
                 </li>
                 @endif
-
-                <li class="nav-item has-treeview">
-                    <a href="#" class="nav-link ">
-                        <i class="nav-icon fas fa-tachometer-alt"></i>
-                        <p>
-                            Laporan
-                            <i class="right fas fa-angle-left"></i>
-                        </p>
-                    </a>
-                    <ul class="nav nav-treeview">
-                        @if (auth()->user()->level == "karyawan")
-                        <li class="nav-item">
-                            <a href="#" class="nav-link ">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Presensi Per Karyawan</p>
-                            </a>
-                        </li>
-                        @endif
-                        @if (auth()->user()->level == "admin")
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Presensi Keseluruhan</p>
-                            </a>
-                        </li>
-                        @endif
-                    </ul>
-                </li>
+                
                 <li class="nav-item">
                     <a href="{{ route('logout') }}" class="nav-link">
                         <i class="nav-icon fas fa-th"></i>
