@@ -10,7 +10,7 @@ class HalamanController extends Controller
 {
     public function index(){
         $halaman = DB::table('halamans')->get();
-        dump($halaman);
-        return view('Halaman');
+        // dump($halaman);
+        return view('admin/Halaman', compact('halaman'));
     }
 }
