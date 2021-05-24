@@ -56,7 +56,7 @@ class VisimisiController extends Controller
         Visimisi::create($input);
      
         return redirect()->route('visimisi.index')
-                        ->with('success','Visimisi created successfully.');
+                        ->with('success','Visi dan Misi Berhasil Dibuat !');
     }
      
     /**
@@ -109,7 +109,7 @@ class VisimisiController extends Controller
         $visimisi->update($input);
     
         return redirect()->route('visimisi.index')
-                        ->with('success','Visimisi updated successfully');
+                        ->with('success','Visi dan Misi Berhasil Diupdate !');
     }
   
     /**
@@ -123,6 +123,6 @@ class VisimisiController extends Controller
         $visimisi->delete();
      
         return redirect()->route('visimisi.index')
-                        ->with('success','Visimisi deleted successfully');
+                        ->with('success','Visi dan Misi Berhasil Dihapus !');
     }
 }

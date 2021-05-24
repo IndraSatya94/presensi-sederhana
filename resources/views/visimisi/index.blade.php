@@ -47,7 +47,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
             <p>{{ $message }}</p>
         </div>
     @endif
-     
+    <div class="button-buat">
+        <a class="btn btn-success" href="{{ route('visimisi.create') }}"> Buat Visi dan Misi</a>
+    </div>
+    <br>
     <table class="table table-bordered">
         <tr>
             <th>No</th>

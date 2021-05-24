@@ -14,7 +14,7 @@
      
     @if ($errors->any())
         <div class="alert alert-danger">
-            <strong>Whoops!</strong> Ada yang salah dengan inputan anda.<br><br>
+            <strong>Periksa Kembali Inputan Anda</strong><br><br>
             <ul>
                 @foreach ($errors->all() as $error)
                     <li>{{ $error }}</li>
@@ -37,7 +37,7 @@
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Body:</strong>
-                    <textarea class="form-control" style="height:150px" name="body" placeholder="Detail">{{ $visimisi->body }}</textarea>
+                    <textarea class="form-control" style="height:150px" name="body" placeholder="Body">{{ $visimisi->body }}</textarea>
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
