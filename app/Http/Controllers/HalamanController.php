@@ -9,8 +9,8 @@ use App\Http\Controllers\Controller;
 class HalamanController extends Controller
 {
     public function index(){
-        $halaman = DB::table('halamans')->get();
+        $menus = DB::table('menus')->get();
         // dump($halaman);
-        return view('admin/Halaman', compact('halaman'));
+        return view('admin/Halaman', compact('menus'));
     }
 }

@@ -23,14 +23,12 @@ route::get('/login',[LoginController::class,'halamanlogin'])->name('login');
 route::post('/postlogin',[LoginController::class,'postlogin'])->name('postlogin');
 route::get('/logout',[LoginController::class,'logout'])->name('logout');
 
-
 Route::group(['middleware' => ['auth','ceklevel:admin,operator']], function () {
     route::get('/home',[HomeController::class,'index'])->name('home');
     route::get('/halaman',[HalamanController::class,'index'])->name('halaman');
+
     route::get('/registrasi',[LoginController::class,'registrasi'])->name('registrasi');    
     //crud
-    Route::resource('products', ProductController::class);
-
     Route::resource('menus', MenuController::class);
     Route::resource('visimisi', VisimisiController::class);
     // akhir crud

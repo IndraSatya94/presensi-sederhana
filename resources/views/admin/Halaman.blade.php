@@ -46,21 +46,17 @@ scratch. This page gets rid of all links and provides the needed markup only.
                         <thead class="thead-dark">
                             <tr>
                             <th scope="col">No</th>
-                            <th scope="col">Menu</th>
                             <th scope="col">Nama</th>
                             <th scope="col">Body</th>
-                            <th scope="col">Image</th>
                             <th scope="col">Aksi</th>
                             </tr>
                         </thead>
                         <tbody>
-                        @foreach ($halaman as $hal)
+                        @foreach ($menus as $menu)
                             <tr>
                             <th scope="row">{{ $loop->iteration }}</th>
-                            <td>{{ $hal->menu }}</td>
-                            <td>{{ $hal->nama }}</td>
-                            <td>{{ $hal->body }}</td>
-                            <td>{{ $hal->image }}</td>
+                            <td>{{ $menu->nama }}</td>
+                            <td>{{ $menu->body }}</td>
                             </tr>
                         @endforeach
      

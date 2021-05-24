@@ -29,6 +29,13 @@
                     </a>
                 </li>
 
+                <li class="nav-item">
+                    <a href="{{ route('visimisi.index') }}" class="nav-link">
+                        <i class="fas fa-sign-out-alt"></i>
+                        <p>Visi Misi</p>
+                    </a>
+                </li>
+
                 @if (auth()->user()->level == "admin")
                 <li class="nav-item">
                     <a href="{{ route('registrasi') }}" class="nav-link">
