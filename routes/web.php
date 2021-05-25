@@ -8,6 +8,7 @@ use App\Http\Controllers\HalamanController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\MenuController;
 use App\Http\Controllers\VisimisiController;
+use App\Http\Controllers\PimpinanController;
 
 //akhir crud
 
@@ -31,6 +32,7 @@ Route::group(['middleware' => ['auth','ceklevel:admin,operator']], function () {
     //crud
     Route::resource('menus', MenuController::class);
     Route::resource('visimisi', VisimisiController::class);
+    Route::resource('pimpinan', PimpinanController::class);
     // akhir crud
 });
 

@@ -36,6 +36,13 @@
                     </a>
                 </li>
 
+                <li class="nav-item">
+                    <a href="{{ route('pimpinan.index') }}" class="nav-link">
+                        <i class="fas fa-sign-out-alt"></i>
+                        <p>Pimpinan</p>
+                    </a>
+                </li>
+
                 @if (auth()->user()->level == "admin")
                 <li class="nav-item">
                     <a href="{{ route('registrasi') }}" class="nav-link">
