@@ -18,7 +18,8 @@ class LoginController extends Controller
         if(Auth::attempt($request->only('email','password'))){
             return redirect('/home');
         }    
-        return redirect('/');
+        return redirect('/login')
+                        ->with('success','Password / Email Salah');
     }
 
     public function logout(){

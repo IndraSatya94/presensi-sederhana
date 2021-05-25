@@ -1,3 +1,4 @@
+
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
     <a href="index3.html" class="brand-link">
@@ -31,22 +32,29 @@
 
                 <li class="nav-item">
                     <a href="{{ route('visimisi.index') }}" class="nav-link">
-                        <i class="fas fa-sign-out-alt"></i>
+                        <i class="fas fa-circle-notch"></i>
                         <p>Visi dan Misi</p>
                     </a>
                 </li>
 
                 <li class="nav-item">
                     <a href="{{ route('pimpinan.index') }}" class="nav-link">
-                        <i class="fas fa-sign-out-alt"></i>
+                        <i class="fas fa-circle-notch"></i>
                         <p>Pimpinan</p>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="{{ route('bupati.index') }}" class="nav-link">
+                        <i class="fas fa-circle-notch"></i>
+                        <p>Bupati</p>
                     </a>
                 </li>
 
                 @if (auth()->user()->level == "admin")
                 <li class="nav-item">
                     <a href="{{ route('registrasi') }}" class="nav-link">
-                        <i class="nav-icon fas fa-th"></i>
+                        <i class="fas fa-circle-notch"></i>
                         <p>
                             Daftarkan Operator Website
                         </p>
@@ -56,7 +64,7 @@
                 
                 <li class="nav-item">
                     <a href="{{ route('logout') }}" class="nav-link">
-                        <i class="nav-icon fas fa-th"></i>
+                        <i class="fas fa-circle-notch"></i>
                         <p>
                             Logout
                         </p>

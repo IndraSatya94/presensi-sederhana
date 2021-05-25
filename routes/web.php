@@ -9,12 +9,13 @@ use App\Http\Controllers\ProductController;
 use App\Http\Controllers\MenuController;
 use App\Http\Controllers\VisimisiController;
 use App\Http\Controllers\PimpinanController;
+use App\Http\Controllers\BupatiController;
 
 //akhir crud
 
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('bolmongkab/index');
 });
 
 
@@ -32,6 +33,7 @@ Route::group(['middleware' => ['auth','ceklevel:admin,operator']], function () {
     //crud
     Route::resource('menus', MenuController::class);
     Route::resource('visimisi', VisimisiController::class);
+    Route::resource('bupati', BupatiController::class);
     Route::resource('pimpinan', PimpinanController::class);
     // akhir crud
 });

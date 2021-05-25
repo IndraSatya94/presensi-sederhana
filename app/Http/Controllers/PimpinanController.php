@@ -42,10 +42,10 @@ class PimpinanController extends Controller
             'nama' => 'required',
             'jabatan' => 'required',
             'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
-            'linkedin' => 'required',
-            'twitter' => 'required',
-            'facebook' => 'required',
-            'instagram' => 'required',
+            // 'linkedin' => 'required',
+            // 'twitter' => 'required',
+            // 'facebook' => 'required',
+            // 'instagram' => 'required',
         ]);
   
         $input = $request->all();
@@ -97,10 +97,10 @@ class PimpinanController extends Controller
         $request->validate([
             'nama'=>'required',
             'jabatan'=>'required',
-            'linkedin'=>'required',
-            'twitter'=>'required',
-            'facebook'=>'required',
-            'instagram'=>'required'
+            // 'linkedin'=>'required',
+            // 'twitter'=>'required',
+            // 'facebook'=>'required',
+            // 'instagram'=>'required'
         ]);
   
         $input = $request->all();

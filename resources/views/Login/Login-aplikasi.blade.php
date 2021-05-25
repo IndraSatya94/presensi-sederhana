@@ -26,6 +26,11 @@
         <!-- /.login-logo -->
         <div class="card">
             <div class="card-body login-card-body">
+                @if ($message = Session::get('success'))
+                <div class="alert alert-success">
+                    <p>{{ $message }}</p>
+                </div>
+                @endif
                 <p class="login-box-msg">Sign in untuk masuk kehalaman admin</p>
 
                 <form action="{{ route('postlogin') }}" method="post">
