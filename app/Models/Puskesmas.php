@@ -5,11 +5,12 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Menu extends Model
+class Puskesmas extends Model
 {
+    protected $table = 'puskesmas';
     use HasFactory;
-  
+
     protected $fillable = [
-        'nama', 'body'
+        'nama', 'alamat',
     ];
 }

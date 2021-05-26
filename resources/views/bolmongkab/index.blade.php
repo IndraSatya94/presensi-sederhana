@@ -49,10 +49,10 @@
 
           <li class="drop-down"><a href="#">Pemerintah</a>
             <ul>
-              <li><a href="detail/visimisi.html">Visi dan Misi</a></li>
+              <li><a href="{{ ('/visimisitemp') }}">Visi dan Misi</a></li>
               <li class="drop-down"><a href="#">Pimpinan</a>
                 <ul>
-                  <li><a href="detail/bupati.html">Bupati</a></li>
+                  <li><a href="{{ ('/bupatitemp') }}">Bupati</a></li>
                   <li><a href="detail/wakilbupati.html">Wakil Bupati</a></li>
                   <li><a href="detail/sekretariat.html">Sekretariat</a></li>
                 </ul>

@@ -8,9 +8,15 @@ use App\Http\Controllers\Controller;
 
 class HalamanController extends Controller
 {
-    public function index(){
-        $menus = DB::table('menus')->get();
-        // dump($halaman);
-        return view('admin/Halaman', compact('menus'));
+    // public function index(){
+    //     $menus = DB::table('menus')->get();
+    //     return view('admin/Halaman', compact('menus'));
+    // }
+
+    public function bupati(){
+        return view('bolmongkab/detail/bupati');
+    }
+    public function visimisi(){
+        return view('bolmongkab/detail/visimisi');
     }
 }

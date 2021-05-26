@@ -23,12 +23,6 @@
             <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                 <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
-               <li class="nav-item">
-                    <a href="{{ route('halaman') }}" class="nav-link">
-                        <i class="fas fa-sign-out-alt"></i>
-                        <p>Halaman</p>
-                    </a>
-                </li>
 
                 <li class="nav-item">
                     <a href="{{ route('visimisi.index') }}" class="nav-link">
@@ -48,6 +42,13 @@
                     <a href="{{ route('bupati.index') }}" class="nav-link">
                         <i class="fas fa-circle-notch"></i>
                         <p>Bupati</p>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="{{ route('puskesmas.index') }}" class="nav-link">
+                        <i class="fas fa-circle-notch"></i>
+                        <p>Informasi Puskesmas</p>
                     </a>
                 </li>
 

@@ -1,20 +1,20 @@
-@extends('menus.layout')
+@extends('puskesmas.layout')
   
 @section('content')
 <div class="row">
     <div class="col-lg-12 margin-tb">
         <div class="pull-left">
-            <h2>Tambah menu baru</h2>
+            <h2>Tambah puskesmas</h2>
         </div>
         <div class="pull-right">
-            <a class="btn btn-primary" href="{{ route('menus.index') }}"> Back</a>
+            <a class="btn btn-primary" href="{{ route('puskesmas.index') }}"> Kembali</a>
         </div>
     </div>
 </div>
      
 @if ($errors->any())
     <div class="alert alert-danger">
-        <strong>Whoops!</strong> Ada yang salah dengan inputan anda.<br><br>
+        <strong>Periksa Kembali Inputan Anda !</strong><br><br>
         <ul>
             @foreach ($errors->all() as $error)
                 <li>{{ $error }}</li>
@@ -23,20 +23,20 @@
     </div>
 @endif
      
-<form action="{{ route('menus.store') }}" method="POST" enctype="multipart/form-data">
+<form action="{{ route('puskesmas.store') }}" method="POST" enctype="multipart/form-data">
     @csrf
     
      <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>Name:</strong>
+                <strong>Nama:</strong>
                 <input type="text" name="nama" class="form-control" placeholder="Nama">
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>Body:</strong>
-                <textarea class="form-control" style="height:150px" name="body" placeholder="Body"></textarea>
+                <strong>Alamat:</strong>
+                <textarea class="form-control" style="height:150px" name="alamat" placeholder="Alamat"></textarea>
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12 text-center">

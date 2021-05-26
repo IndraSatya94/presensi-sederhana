@@ -1,11 +1,11 @@
 <?php
-  
+
 namespace App\Http\Controllers;
-  
-use App\Models\Menu;
+
+use App\Models\Puskesmas;
 use Illuminate\Http\Request;
-  
-class MenuController extends Controller
+
+class PuskesmasController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,12 +14,12 @@ class MenuController extends Controller
      */
     public function index()
     {
-        $menus = Menu::latest()->paginate(5);
+        $puskesmas = Puskesmas::latest()->paginate(5);
     
-        return view('menus.index',compact('menus'))
+        return view('puskesmas.index',compact('puskesmas'))
             ->with('i', (request()->input('page', 1) - 1) * 5);
     }
-   
+
     /**
      * Show the form for creating a new resource.
      *
@@ -27,9 +27,9 @@ class MenuController extends Controller
      */
     public function create()
     {
-        return view('menus.create');
+        return view('puskesmas.create');
     }
-    
+
     /**
      * Store a newly created resource in storage.
      *
@@ -40,70 +40,72 @@ class MenuController extends Controller
     {
         $request->validate([
             'nama' => 'required',
+            'alamat' => 'required',
         ]);
   
         $input = $request->all();
     
-        Menu::create($input);
+        Puskesmas::create($input);
      
-        return redirect()->route('menus.index')
-                        ->with('success','Menus created successfully.');
+        return redirect()->route('puskesmas.index')
+                        ->with('success','Informasi Puskesmas Berhasil Ditambahkan !');
     }
-     
+
     /**
      * Display the specified resource.
      *
-     * @param  \App\Menu  $product
+     * @param  \App\Models\Puskesmas  $puskesmas
      * @return \Illuminate\Http\Response
      */
-    public function show(Menu $menu)
+    public function show(Puskesmas $puskesmas)
     {
-        return view('menus.show',compact('menu'));
+        return view('puskesmas.show',compact('puskesmas'));
     }
-     
+
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Menu  $product
+     * @param  \App\Models\Puskesmas  $puskesmas
      * @return \Illuminate\Http\Response
      */
-    public function edit(Menu $menu)
+    public function edit(Puskesmas $puskesmas)
     {
-        return view('menus.edit',compact('menu'));
+        return view('puskesmas.edit',compact('puskesmas'));
     }
-    
+
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Menu  $product
+     * @param  \App\Models\Puskesmas  $puskesmas
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Menu $menu)
+    public function update(Request $request, Puskesmas $puskesmas)
     {
         $request->validate([
             'nama' => 'required',
+            'alamat' => 'required'
         ]);
   
         $input = $request->all();
           
-        $menu->update($input);
+        $puskesmas->update($input);
     
-        return redirect()->route('menus.index')
-                        ->with('success','Menu updated successfully');
+        return redirect()->route('puskesmas.index')
+                        ->with('success','Informasi Puskesmas Berhasil Diupdate !');
     }
-  
+
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Menu  $product
+     * @param  \App\Models\Puskesmas  $puskesmas
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Menu $menu)
+    public function destroy(Puskesmas $puskesmas)
     {
-        $menu->delete();
-     
-        return redirect()->route('menus.index')
-                        ->with('success','Menu deleted successfully');
+        $puskesmas->delete();
+
+        return redirect()->route('puskesmas.index')
+                        ->with('success','Informasi Puskesmas Berhasil Dihapus !');
     }
 }
