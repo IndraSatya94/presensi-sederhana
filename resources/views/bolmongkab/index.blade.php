@@ -53,18 +53,18 @@
               <li class="drop-down"><a href="#">Pimpinan</a>
                 <ul>
                   <li><a href="{{ ('/bupatitemp') }}">Bupati</a></li>
-                  <li><a href="detail/wakilbupati.html">Wakil Bupati</a></li>
-                  <li><a href="detail/sekretariat.html">Sekretariat</a></li>
+                  <li><a href="{{ ('/wakilbupatitemp') }}">Wakil Bupati</a></li>
+                  <li><a href="{{ ('sekretariattemp') }}">Sekretariat</a></li>
                 </ul>
               </li>
               <li class="drop-down"><a href="#">Perangkat Daerah</a>
                 <ul>
                   <li><a href="https://setda.bolmongkab.go.id/#/">Sekretariat Daerah</a></li>
                   <li><a href="https://inspektorat.bolmongkab.go.id/">Inspektorat</a></li>
-                  <li><a href="detail/dinas.html">Dinas</a></li>
-                  <li><a href="detail/badandaerah.html">Badan Daerah</a></li>
-                  <li><a href="detail/kecamatan.html">Kecamatan</a></li>
-                  <li><a href="detail/desa.html">Desa</a></li>
+                  <li><a href="{{ ('/dinastemp') }}">Dinas</a></li>
+                  <li><a href="{{ ('/badandaerahtemp') }}">Badan Daerah</a></li>
+                  <li><a href="{{ ('kecamatantemp') }}">Kecamatan</a></li>
+                  <li><a href="{{ ('desatemp') }}">Desa</a></li>
                 </ul>
               </li>
             </ul>
@@ -72,7 +72,7 @@
 
           <li class="drop-down"><a href="#">Mengenal Bolmong</a>
             <ul>
-              <li><a href="detail/sejarah.html">Sejarah</a></li>
+              <li><a href="{{ ('/sejarahtemp') }}">Sejarah</a></li>
               <li><a href="detail/artilambang.html">Arti Lambang</a></li>
             </ul>
           </li>
@@ -80,7 +80,7 @@
           <li class="drop-down"><a href="#">Layanan dan Informasi</a>
             <ul>
               <li><a href="detail/rpjmd.html">RPJMD</a></li>
-              <li><a href="detail/puskesmas.html">Puskesmas</a></li>
+              <li><a href="{{ ('/puskesmastemp') }}">Puskesmas</a></li>
               <li><a href="detail/pengumuman.html">Pengumuman</a></li>
             </ul>
           </li>

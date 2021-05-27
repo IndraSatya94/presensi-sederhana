@@ -117,8 +117,7 @@
         <hr>
       </div>
       <img src="../assets/img/bogani.jpg" alt="">
-      <h3>Sejarah Kabupaten Bolaang Mongondow</h3>
-      <hr>
+      
       <p>Setelah Proklamasi 17 Agustus 1945, Bolaang Mongondow menjadi bagian wilayah Propinsi Sulawesi yang berpusat di Makassar.
 
         Kemudian tahun 1953 berdasarkan Peraturan Pemerintah Nomor 11 Tahun 1953 Sulawesi Utara dijadikan sebagai daerah otonom tingkat I.

@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
 
+use App\Models\Visimisi;
+
 class HalamanController extends Controller
 {
     // public function index(){
@@ -17,6 +19,31 @@ class HalamanController extends Controller
         return view('bolmongkab/detail/bupati');
     }
     public function visimisi(){
-        return view('bolmongkab/detail/visimisi');
+        $visimisi = Visimisi::latest()->paginate(5);
+        return view('bolmongkab/detail/visimisi',compact('visimisi'));
+    }
+    public function sejarah(){
+        return view('bolmongkab/detail/sejarah');
+    }
+    public function wakilbupati(){
+        return view('bolmongkab/detail/wakilbupati');
+    }
+    public function sekretariat(){
+        return view('bolmongkab/detail/sekretariat');
+    }
+    public function dinas(){
+        return view('bolmongkab/detail/dinas');
+    }
+    public function badandaerah(){
+        return view('bolmongkab/detail/badandaerah');
+    }
+    public function kecamatan(){
+        return view('bolmongkab/detail/kecamatan');
+    }
+    public function desa(){
+        return view('bolmongkab/detail/desa');
+    }
+    public function puskesmas(){
+        return view('bolmongkab/detail/puskesmas');
     }
 }

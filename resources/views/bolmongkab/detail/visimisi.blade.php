@@ -111,21 +111,16 @@
 
     <!-- ======= detail Section ======= -->
     <section id="detail" class="detail">
+    @foreach ($visimisi as $vmisi)
       <div class="container">
         <div class="judul">
-          <h2>VISI DAN MISI</h2>
+          <h2>{{ $vmisi->nama }}</h2>
           <hr>
-          <img src="../assets/img/logobolmong.png" alt="">
+          <img src="/image/{{ $vmisi->image }}" alt="">
         </div>
-        <h3>VISI</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, nemo similique vel modi iusto exercitationem alias incidunt hic autem sequi aperiam eligendi. Aliquam numquam incidunt ipsa doloremque voluptates, possimus non.</p>
-
-          <br><br>
-
-        <h2>MISI</h2>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione, sunt! A laboriosam quod fugiat voluptatem repellat expedita impedit enim minima et ipsa deleniti obcaecati magni eius, aut vero optio mollitia?</p>
-
+        {{ $vmisi->body }}
       </div>
+    @endforeach
     </section><!-- End detail Section -->
 
 

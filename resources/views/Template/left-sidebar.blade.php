@@ -46,9 +46,37 @@
                 </li>
 
                 <li class="nav-item">
+                    <a href="{{ route('wakilbupati.index') }}" class="nav-link">
+                        <i class="fas fa-circle-notch"></i>
+                        <p>Wakil Bupati</p>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="{{ route('sekda.index') }}" class="nav-link">
+                        <i class="fas fa-circle-notch"></i>
+                        <p>Sekretariat Daerah</p>
+                    </a>
+                </li>
+
+                <li class="nav-item">
                     <a href="{{ route('puskesmas.index') }}" class="nav-link">
                         <i class="fas fa-circle-notch"></i>
                         <p>Informasi Puskesmas</p>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="{{ route('sejarah.index') }}" class="nav-link">
+                        <i class="fas fa-circle-notch"></i>
+                        <p>Sejarah</p>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="{{ route('download.index') }}" class="nav-link">
+                        <i class="fas fa-circle-notch"></i>
+                        <p>Download</p>
                     </a>
                 </li>
 

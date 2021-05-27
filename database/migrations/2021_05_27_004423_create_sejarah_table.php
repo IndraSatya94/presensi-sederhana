@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreatePuskesmasTable extends Migration
+class CreateSejarahTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,13 @@ class CreatePuskesmasTable extends Migration
      */
     public function up()
     {
-        Schema::create('puskesmas', function (Blueprint $table) {
+        Schema::create('sejarah', function (Blueprint $table) {
             $table->id();
             $table->string('nama');
-            $table->text('alamat')->nullable();
+            $table->string('image')->nullable();
+            $table->string('body')->nullable();
+            $table->string('tentang')->nullable();
+            $table->string('detail')->nullable();
             $table->timestamps();
         });
     }
@@ -28,6 +31,6 @@ class CreatePuskesmasTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('puskesmas');
+        Schema::dropIfExists('sejarah');
     }
 }
